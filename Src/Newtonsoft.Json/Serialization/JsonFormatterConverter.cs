@@ -23,14 +23,14 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NETFX_CORE || PORTABLE40 || PORTABLE)
 using System;
 using System.Globalization;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.JsonV4.Serialization
 {
     internal class JsonFormatterConverter : IFormatterConverter
     {

@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET20 || NET35 || PORTABLE40)
 using System;
 using System.Collections.Generic;
@@ -31,10 +32,9 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #endif
 using System.Text;
 using System.Reflection;
-using Newtonsoft.Json.Utilities;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.JsonV4.Serialization
 {
     /// <summary>
     /// Get and set values for a <see cref="MemberInfo"/> using dynamic methods.

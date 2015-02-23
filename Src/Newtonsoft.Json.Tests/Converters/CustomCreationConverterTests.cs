@@ -25,7 +25,7 @@
 
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Converters;
+using Newtonsoft.JsonV4.Converters;
 #if !NETFX_CORE
 using NUnit.Framework;
 
@@ -35,7 +35,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.JsonV4.Tests.Converters
 {
     [TestFixture]
     public class CustomCreationConverterTests : TestFixtureBase

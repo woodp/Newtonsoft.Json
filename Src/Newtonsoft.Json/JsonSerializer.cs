@@ -29,13 +29,13 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Runtime.Serialization.Formatters;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Converters;
 using System.Runtime.Serialization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Utilities;
+using ErrorEventArgs = Newtonsoft.JsonV4.Serialization.ErrorEventArgs;
 
-namespace Newtonsoft.Json
+namespace Newtonsoft.JsonV4
 {
     /// <summary>
     /// Serializes and deserializes objects into and from the JSON format.
@@ -77,7 +77,7 @@ namespace Newtonsoft.Json
         /// <summary>
         /// Occurs when the <see cref="JsonSerializer"/> errors during serialization and deserialization.
         /// </summary>
-        public virtual event EventHandler<ErrorEventArgs> Error;
+        public virtual event EventHandler<Serialization.ErrorEventArgs> Error;
 
         /// <summary>
         /// Gets or sets the <see cref="IReferenceResolver"/> used by the serializer when resolving references.
@@ -965,9 +965,9 @@ namespace Newtonsoft.Json
             return null;
         }
 
-        internal void OnError(ErrorEventArgs e)
+        internal void OnError(Serialization.ErrorEventArgs e)
         {
-            EventHandler<ErrorEventArgs> error = Error;
+            EventHandler<Serialization.ErrorEventArgs> error = Error;
             if (error != null)
                 error(this, e);
         }

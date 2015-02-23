@@ -23,20 +23,21 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Tests.Linq;
+using Newtonsoft.JsonV4.Tests.TestObjects;
+using Newtonsoft.JsonV4.Utilities;
 #if !(PORTABLE || PORTABLE40)
 #if !(NET35 || NET20 || PORTABLE)
 using System.Dynamic;
 #endif
 using System.Text;
-using Newtonsoft.Json.Tests.Linq;
 using global::System;
 using global::System.Collections;
 using global::System.Collections.Generic;
 using global::System.Globalization;
 using global::System.Runtime.Serialization.Formatters;
-using global::Newtonsoft.Json.Linq;
-using global::Newtonsoft.Json.Serialization;
-using global::Newtonsoft.Json.Tests.TestObjects;
 #if !NETFX_CORE
 using global::NUnit.Framework;
 #else
@@ -44,12 +45,11 @@ using global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using global::Newtonsoft.Json.Utilities;
 using global::System.Net;
 using global::System.Runtime.Serialization;
 using global::System.IO;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.JsonV4.Tests.Serialization
 {
     [TestFixture]
     public class TypeNameHandlingTests : TestFixtureBase
@@ -1722,7 +1722,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             input.Add(new Stack<string>(new List<string> { "Seven", "Eight", "Nine" }));
 
             string serialized = JsonConvert.SerializeObject(input,
-                Newtonsoft.Json.Formatting.Indented,
+                Formatting.Indented,
                 new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All, TypeNameAssemblyFormat = FormatterAssemblyStyle.Full } // TypeNameHandling.Auto will work
             );
 

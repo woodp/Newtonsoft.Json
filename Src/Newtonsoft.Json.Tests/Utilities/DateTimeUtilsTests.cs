@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using Newtonsoft.JsonV4.Utilities;
 #if !NETFX_CORE
 using global::NUnit.Framework;
 #else
@@ -35,9 +36,9 @@ using global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace Newtonsoft.JsonV4.Tests.Utilities
 {
     [TestFixture]
     public class DateTimeUtilsTests : TestFixtureBase

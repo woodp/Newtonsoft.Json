@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Linq.JsonPath
+namespace Newtonsoft.JsonV4.Linq.JsonPath
 {
     internal class ArrayIndexFilter : PathFilter
     {

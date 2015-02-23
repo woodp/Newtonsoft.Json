@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Linq;
 #if !(NET35 || NET20 || PORTABLE40)
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,6 @@ using System.Linq;
 using System.Numerics;
 #endif
 using System.Text;
-using Newtonsoft.Json.Linq;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -40,10 +40,10 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.JsonV4.Tests.Linq
 {
     [TestFixture]
     public class DynamicTests : TestFixtureBase

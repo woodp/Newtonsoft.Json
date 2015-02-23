@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
 
-namespace Newtonsoft.Json.Tests.Documentation
+namespace Newtonsoft.JsonV4.Tests.Documentation
 {
     public class JsonNetVsWindowsDataJsonTests
     {

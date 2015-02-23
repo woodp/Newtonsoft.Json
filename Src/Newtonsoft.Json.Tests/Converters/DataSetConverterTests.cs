@@ -23,9 +23,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Converters;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Tests.TestObjects;
 #if !(NETFX_CORE || PORTABLE || PORTABLE40)
 using System;
-using Newtonsoft.Json.Converters;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -33,11 +35,9 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
 using System.Data;
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.JsonV4.Tests.Converters
 {
     public class DataSetConverterTests : TestFixtureBase
     {

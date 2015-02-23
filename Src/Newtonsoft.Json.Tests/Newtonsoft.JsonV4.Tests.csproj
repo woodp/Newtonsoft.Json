@@ -7,8 +7,8 @@
     <ProjectGuid>{CCD1B8C4-7349-409C-A090-A9B9A1ABD981}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Newtonsoft.Json.Tests</RootNamespace>
-    <AssemblyName>Newtonsoft.Json.Tests</AssemblyName>
+    <RootNamespace>Newtonsoft.JsonV4.Tests</RootNamespace>
+    <AssemblyName>Newtonsoft.JsonV4.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -196,17 +196,6 @@
     <Compile Include="JsonTextReaderTest.cs" />
     <Compile Include="JsonTextWriterTest.cs" />
     <Compile Include="JsonValidatingReaderTests.cs" />
-    <Compile Include="LinqToSql\Department.cs" />
-    <Compile Include="LinqToSql\DepartmentConverter.cs" />
-    <Compile Include="LinqToSql\GuidByteArrayConverter.cs" />
-    <Compile Include="LinqToSql\LinqToSqlClasses.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LinqToSqlClasses.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="LinqToSql\LinqToSqlClassesSerializationTests.cs" />
-    <Compile Include="LinqToSql\Person.cs" />
-    <Compile Include="LinqToSql\Role.cs" />
     <Compile Include="Linq\ComponentModel\BindingTests.cs" />
     <Compile Include="Linq\ComponentModel\JPropertyDescriptorTests.cs" />
     <Compile Include="Linq\DynamicTests.cs" />
@@ -405,11 +394,6 @@
     <Compile Include="Utilities\StringUtilsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LinqToSql\LinqToSqlClasses.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LinqToSqlClasses.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Schema\Specs\additionalItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -510,17 +494,14 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FileSystemEntityModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="LinqToSql\LinqToSqlClasses.dbml.layout">
-      <DependentUpon>LinqToSqlClasses.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.JsonV4.csproj">
       <Project>{eeea67f9-9089-481d-a4dc-0966dec9fd7d}</Project>
-      <Name>Newtonsoft.Json</Name>
+      <Name>Newtonsoft.JsonV4</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

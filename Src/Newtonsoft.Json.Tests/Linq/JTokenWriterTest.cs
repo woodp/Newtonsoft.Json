@@ -25,6 +25,7 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Linq;
 #if !(NET20 || NET35 || PORTABLE || PORTABLE40)
 using System.Numerics;
 #endif
@@ -36,9 +37,8 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json;
+using Newtonsoft.JsonV4;
 using System.IO;
-using Newtonsoft.Json.Linq;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -46,7 +46,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.JsonV4.Tests.Linq
 {
     [TestFixture]
     public class JTokenWriterTest : TestFixtureBase
@@ -210,7 +210,7 @@ namespace Newtonsoft.Json.Tests.Linq
         {
             JTokenWriter writer = new JTokenWriter
             {
-                DateTimeZoneHandling = Json.DateTimeZoneHandling.Utc
+                DateTimeZoneHandling = JsonV4.DateTimeZoneHandling.Utc
             };
 
             writer.WriteValue(new DateTime(2000, 1, 1, 1, 1, 1, DateTimeKind.Unspecified));

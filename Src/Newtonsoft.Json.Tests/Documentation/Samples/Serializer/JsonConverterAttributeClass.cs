@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Converters;
+using Newtonsoft.JsonV4.Converters;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Serializer
 {
     public class JsonConverterAttributeClass
     {

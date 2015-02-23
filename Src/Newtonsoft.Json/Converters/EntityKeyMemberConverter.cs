@@ -23,13 +23,13 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET20 || NETFX_CORE || PORTABLE40 || PORTABLE)
 using System;
-using Newtonsoft.Json.Serialization;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.JsonV4.Converters
 {
     /// <summary>
     /// Converts an Entity Framework EntityKey to and from JSON.

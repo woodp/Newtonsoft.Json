@@ -26,15 +26,15 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
 using System.Text;
 using System.IO;
 using System.Xml;
-using Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace Newtonsoft.JsonV4
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating Json data.

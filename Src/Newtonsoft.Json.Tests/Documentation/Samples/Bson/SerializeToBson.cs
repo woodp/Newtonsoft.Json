@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Bson;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Bson
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Bson
 {
     public class SerializeToBson
     {

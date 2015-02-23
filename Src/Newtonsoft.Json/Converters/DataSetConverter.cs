@@ -23,12 +23,12 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Serialization;
 #if !(NETFX_CORE || PORTABLE40 || PORTABLE)
 using System;
 using System.Data;
-using Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.JsonV4.Converters
 {
     /// <summary>
     /// Converts a <see cref="DataSet"/> to and from JSON.

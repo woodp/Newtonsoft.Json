@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Serialization;
 #if !(PORTABLE || NETFX_CORE || PORTABLE40)
 using System;
 using System.Collections.Generic;
@@ -31,10 +32,9 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #endif
 using System.Reflection;
 using System.Reflection.Emit;
-using Newtonsoft.Json.Serialization;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.JsonV4.Utilities
 {
     internal class DynamicReflectionDelegateFactory : ReflectionDelegateFactory
     {

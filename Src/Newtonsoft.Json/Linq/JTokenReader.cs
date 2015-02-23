@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.JsonV4.Linq
 {
     /// <summary>
     /// Represents a reader that provides fast, non-cached, forward-only access to serialized Json data.

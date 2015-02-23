@@ -29,11 +29,11 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.JsonV4.Schema
 {
     /// <summary>
     /// Resolves <see cref="JsonSchema"/> from an id.

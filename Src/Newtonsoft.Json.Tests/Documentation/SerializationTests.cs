@@ -23,6 +23,10 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Converters;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Tests.TestObjects;
 #if !(NET35 || NET20 || PORTABLE)
 using System;
 using System.Collections.Generic;
@@ -32,8 +36,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -41,13 +43,11 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
 using System.Globalization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using ErrorEventArgs = Newtonsoft.JsonV4.Serialization.ErrorEventArgs;
 
-namespace Newtonsoft.Json.Tests.Documentation
+namespace Newtonsoft.JsonV4.Tests.Documentation
 {
     public class SerializationTests
     {
@@ -231,7 +231,7 @@ namespace Newtonsoft.Json.Tests.Documentation
                 ]",
                 new JsonSerializerSettings
                 {
-                    Error = delegate(object sender, ErrorEventArgs args)
+                    Error = delegate(object sender, JsonV4.Serialization.ErrorEventArgs args)
                     {
                         errors.Add(args.ErrorContext.Error.Message);
                         args.ErrorContext.Handled = true;
@@ -255,7 +255,7 @@ namespace Newtonsoft.Json.Tests.Documentation
             List<string> errors = new List<string>();
 
             JsonSerializer serializer = new JsonSerializer();
-            serializer.Error += delegate(object sender, ErrorEventArgs args)
+            serializer.Error += delegate(object sender, JsonV4.Serialization.ErrorEventArgs args)
             {
                 // only log an error once
                 if (args.CurrentObject == args.ErrorContext.OriginalObject)

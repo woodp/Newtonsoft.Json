@@ -29,6 +29,8 @@ using System.IO;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #endif
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Schema;
 #if !(NET20 || NET35 || PORTABLE)
 using System.Numerics;
 #endif
@@ -42,12 +44,10 @@ using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAtt
 #endif
 using System.Xml;
 using System.Xml.Schema;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using Newtonsoft.Json.Utilities;
-using ValidationEventArgs = Newtonsoft.Json.Schema.ValidationEventArgs;
+using Newtonsoft.JsonV4.Utilities;
+using ValidationEventArgs = Newtonsoft.JsonV4.Schema.ValidationEventArgs;
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.JsonV4.Tests
 {
     [TestFixture]
     public class JsonValidatingReaderTests : TestFixtureBase
@@ -81,7 +81,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = @"{'name':""James"",'hobbies':[""pie"",'cake']}";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -151,7 +151,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "['pie','cake',['nested1','nested2'],{'nestedproperty1':1.1,'nestedproperty2':[null]}]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -226,7 +226,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "'pie'";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -250,7 +250,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "'The quick brown fox jumps over the lazy dog.'";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -277,7 +277,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "['one','two','THREE']";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -314,7 +314,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "'The quick brown fox jumps over the lazy dog.'";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -338,7 +338,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "10";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -363,7 +363,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "99999999999999999999999999999999999999999999999999999999999999999999";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -387,7 +387,7 @@ namespace Newtonsoft.Json.Tests
 
             JValue v = new JValue(new BigInteger(1));
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             v.Validate(JsonSchema.Parse(schemaJson), (sender, args) => { validationEventArgs = args; });
 
@@ -425,7 +425,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "1";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -452,7 +452,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[1,2,3]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -489,7 +489,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "10.0";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -512,7 +512,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "1.1";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -539,7 +539,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[1.1,2.2,3.0]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -579,7 +579,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[1.1,2.2,4.001]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -620,7 +620,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[999999999999999999999999999999999999999999999999999999998]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -650,7 +650,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[999999999999999999999999999999999999999999999999999999999]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -683,7 +683,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[999999999999999999999999999999999999999999999999999999999]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -715,7 +715,7 @@ namespace Newtonsoft.Json.Tests
 
             JArray a = new JArray(new JValue(new BigInteger(0)));
 
-            ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             a.Validate(JsonSchema.Parse(schemaJson), (sender, args) => { validationEventArgs = args; });
 
@@ -735,7 +735,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[1]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -767,7 +767,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[null]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -801,7 +801,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[true,false]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -836,7 +836,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[null,null,null,null]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -872,7 +872,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[null]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -903,7 +903,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[null,null,null,null]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -937,7 +937,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "{'name':'James'}";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -982,7 +982,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "{'name':'James'}";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -1021,7 +1021,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "{'name':'James','additionalProperty1':null,'additionalProperty2':null}";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -1078,7 +1078,7 @@ namespace Newtonsoft.Json.Tests
             List<string> errors = new List<string>();
             string json = "'The quick brown fox jumps over the lazy dog.'";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) =>
@@ -1143,7 +1143,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = @"[1, 'a', null]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -1189,7 +1189,7 @@ namespace Newtonsoft.Json.Tests
   ""hey"": ""A string!""
 }";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -1343,7 +1343,7 @@ namespace Newtonsoft.Json.Tests
   }
 }";
 
-            IList<ValidationEventArgs> validationEventArgs = new List<ValidationEventArgs>();
+            IList<JsonV4.Schema.ValidationEventArgs> validationEventArgs = new List<JsonV4.Schema.ValidationEventArgs>();
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs.Add(args); };
@@ -1460,7 +1460,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[1,2]";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };
@@ -1496,7 +1496,7 @@ namespace Newtonsoft.Json.Tests
 
             string json = "[1,2";
 
-            Json.Schema.ValidationEventArgs validationEventArgs = null;
+            JsonV4.Schema.ValidationEventArgs validationEventArgs = null;
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs = args; };

@@ -34,7 +34,7 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 using System.Linq;
 #endif
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace Newtonsoft.JsonV4.Tests.TestObjects
 {
 #if !(NETFX_CORE || NET35 || NET20 || PORTABLE || PORTABLE40)
     [TypeConverter(typeof(MyInterfaceConverter))]

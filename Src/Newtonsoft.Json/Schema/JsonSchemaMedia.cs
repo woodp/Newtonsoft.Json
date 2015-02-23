@@ -23,7 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.JsonV4.Schema
 {
     /// <summary>
     /// An in-memory representation of a JSON Schema media.

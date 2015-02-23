@@ -23,6 +23,9 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Tests.Serialization;
+using Newtonsoft.JsonV4.Tests.TestObjects;
+using Newtonsoft.JsonV4.Utilities;
 #if !(PORTABLE40 || NET20 || NET35)
 using System;
 using System.Diagnostics;
@@ -34,12 +37,9 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.Serialization;
+using Newtonsoft.JsonV4.Serialization;
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace Newtonsoft.JsonV4.Tests.Utilities
 {
     [TestFixture]
     public class ExpressionReflectionDelegateFactoryTests : TestFixtureBase

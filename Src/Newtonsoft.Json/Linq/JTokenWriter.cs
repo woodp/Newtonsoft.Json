@@ -25,12 +25,12 @@
 
 using System;
 using System.Globalization;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.JsonV4.Linq
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating Json data.

@@ -37,7 +37,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.JsonV4.Utilities
 {
     internal static class JavaScriptUtils
     {

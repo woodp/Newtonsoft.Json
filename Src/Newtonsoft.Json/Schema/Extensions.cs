@@ -24,10 +24,10 @@
 #endregion
 
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.JsonV4.Schema
 {
     /// <summary>
     /// Contains the JSON schema extension methods.

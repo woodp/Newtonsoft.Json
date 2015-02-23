@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 using Microsoft.FSharp.Collections;
 using NUnit.Framework;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.JsonV4.Tests.Serialization
 {
     [TestFixture]
     public class FSharpTests : TestFixtureBase

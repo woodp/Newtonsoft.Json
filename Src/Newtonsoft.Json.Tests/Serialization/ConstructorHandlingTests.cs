@@ -25,7 +25,7 @@
 
 using System;
 using System.Reflection;
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.JsonV4.Tests.TestObjects;
 #if !NETFX_CORE
 using NUnit.Framework;
 
@@ -35,7 +35,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.JsonV4.Tests.Serialization
 {
     [TestFixture]
     public class ConstructorHandlingTests : TestFixtureBase

@@ -23,14 +23,14 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Utilities;
 #if !(NETFX_CORE || PORTABLE40 || PORTABLE)
 using System;
 using System.Data.SqlTypes;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
 using System.Collections.Generic;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.JsonV4.Converters
 {
     /// <summary>
     /// Converts a binary value to and from a base 64 string value.

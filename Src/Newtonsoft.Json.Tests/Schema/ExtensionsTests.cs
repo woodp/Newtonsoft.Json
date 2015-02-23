@@ -25,6 +25,9 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Schema;
+using Newtonsoft.JsonV4.Tests.TestObjects;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -32,16 +35,13 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Schema;
-using Newtonsoft.Json.Linq;
 using System.IO;
-using Newtonsoft.Json.Tests.TestObjects;
 #if !(NETFX_CORE)
 using System.Data;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace Newtonsoft.JsonV4.Tests.Schema
 {
     [TestFixture]
     public class ExtensionsTests : TestFixtureBase

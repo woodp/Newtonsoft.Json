@@ -27,10 +27,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
+using Newtonsoft.JsonV4.Converters;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Schema;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Tests.TestObjects;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -38,11 +40,9 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Schema;
 using System.IO;
-using Newtonsoft.Json.Linq;
 using System.Text;
-using Extensions = Newtonsoft.Json.Schema.Extensions;
+using Extensions = Newtonsoft.JsonV4.Schema.Extensions;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -50,7 +50,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace Newtonsoft.JsonV4.Tests.Schema
 {
     [TestFixture]
     public class JsonSchemaGeneratorTests : TestFixtureBase

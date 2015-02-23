@@ -33,9 +33,9 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.JsonV4.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.JsonV4.Utilities
 {
     internal static class StringUtils
     {

@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Serialization;
 #if !(NET20 || NET35 || NET40 || PORTABLE40)
 using System;
 using System.Collections.Generic;
@@ -30,9 +31,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.JsonV4.Utilities
 {
     internal static class ImmutableCollectionsUtils
     {

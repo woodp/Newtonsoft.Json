@@ -24,15 +24,15 @@
 #endregion
 
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Utilities;
 using System.Collections;
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.JsonV4.Linq
 {
     /// <summary>
     /// Represents a collection of <see cref="JToken"/> objects.

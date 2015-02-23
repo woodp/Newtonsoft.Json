@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace Newtonsoft.JsonV4.Tests.TestObjects
 {
     public class PersonRaw
     {

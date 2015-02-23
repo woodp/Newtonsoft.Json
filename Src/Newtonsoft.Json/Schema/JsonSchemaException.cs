@@ -26,7 +26,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.JsonV4.Schema
 {
     /// <summary>
     /// Returns detailed information about the schema exception.

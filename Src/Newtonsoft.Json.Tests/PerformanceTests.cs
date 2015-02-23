@@ -24,6 +24,10 @@
 #endregion
 
 using System.Xml;
+using Newtonsoft.JsonV4.Bson;
+using Newtonsoft.JsonV4.Converters;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET20 || NET35 || NETFX_CORE || PORTABLE)
 using System;
 using System.Collections;
@@ -35,16 +39,12 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web.Script.Serialization;
 using System.Xml.Linq;
-using Newtonsoft.Json.Utilities;
 using NUnit.Framework;
 using System.Runtime.Serialization.Json;
 using System.Text;
-using Newtonsoft.Json.Bson;
 using System.Runtime.Serialization.Formatters.Binary;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Converters;
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.JsonV4.Tests
 {
     [Serializable]
     [DataContract]
@@ -864,8 +864,8 @@ If attributes are not mentioned, default values are used in each case.
             Type type = typeof(T);
 
             JsonSerializer serializer = new JsonSerializer();
-            serializer.ObjectCreationHandling = Newtonsoft.Json.ObjectCreationHandling.Replace;
-            serializer.MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore;
+            serializer.ObjectCreationHandling = ObjectCreationHandling.Replace;
+            serializer.MissingMemberHandling = MissingMemberHandling.Ignore;
             serializer.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 
             return (T)serializer.Deserialize(new BsonReader(new MemoryStream(bson)), type);

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.JsonV4.Converters;
+using Newtonsoft.JsonV4.Serialization;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Serializer
 {
     public class ErrorHandlingEvent
     {

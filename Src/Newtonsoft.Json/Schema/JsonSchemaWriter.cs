@@ -24,9 +24,9 @@
 #endregion
 
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -34,7 +34,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.JsonV4.Schema
 {
     internal class JsonSchemaWriter
     {

@@ -24,13 +24,12 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Utilities;
-
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #endif
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.JsonV4.Serialization
 {
     /// <summary>
     /// Maps a JSON property to a .NET member or constructor parameter.

@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json.Schema;
-using System;
+﻿using System;
 using System.IO;
+using Newtonsoft.JsonV4.Schema;
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace Newtonsoft.JsonV4.Tests.Schema
 {
     public class JsonSchemaSpecTestsResolver : JsonSchemaResolver
     {

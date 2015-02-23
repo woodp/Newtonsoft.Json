@@ -19,12 +19,12 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("DataServicesTestDatabaseModel", "FK_File_Folder", "Folder", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Newtonsoft.Json.Tests.Folder), "File", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Newtonsoft.Json.Tests.File))]
-[assembly: EdmRelationshipAttribute("DataServicesTestDatabaseModel", "FK_Folder_Folder", "Folder", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Newtonsoft.Json.Tests.Folder), "Folder1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Newtonsoft.Json.Tests.Folder))]
+[assembly: EdmRelationshipAttribute("DataServicesTestDatabaseModel", "FK_File_Folder", "Folder", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Newtonsoft.JsonV4.Tests.Folder), "File", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Newtonsoft.JsonV4.Tests.File))]
+[assembly: EdmRelationshipAttribute("DataServicesTestDatabaseModel", "FK_Folder_Folder", "Folder", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Newtonsoft.JsonV4.Tests.Folder), "Folder1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Newtonsoft.JsonV4.Tests.Folder))]
 
 #endregion
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.JsonV4.Tests
 {
     #region Contexts
     

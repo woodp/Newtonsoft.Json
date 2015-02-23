@@ -25,6 +25,9 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Bson;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Tests.TestObjects;
 #if !(NET20 || NET35 || PORTABLE)
 using System.Numerics;
 #endif
@@ -37,11 +40,8 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Bson;
 using System.IO;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.JsonV4.Utilities;
 using System.Globalization;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
@@ -50,7 +50,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Bson
+namespace Newtonsoft.JsonV4.Tests.Bson
 {
     [TestFixture]
     public class BsonWriterTests : TestFixtureBase
@@ -708,7 +708,7 @@ namespace Newtonsoft.Json.Tests.Bson
             MemoryStream ms = new MemoryStream();
             JsonWriter writer = new BsonWriter(ms)
             {
-                DateTimeZoneHandling = Json.DateTimeZoneHandling.Utc
+                DateTimeZoneHandling = JsonV4.DateTimeZoneHandling.Utc
             };
 
             writer.WriteStartArray();

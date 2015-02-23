@@ -26,13 +26,12 @@
 using System;
 using System.Globalization;
 using System.Reflection;
-using Newtonsoft.Json.Serialization;
-
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #endif
+using Newtonsoft.JsonV4.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.JsonV4.Utilities
 {
     internal abstract class ReflectionDelegateFactory
     {

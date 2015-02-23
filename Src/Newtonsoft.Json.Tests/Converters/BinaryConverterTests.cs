@@ -25,6 +25,7 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Converters;
 #if !NET20 && !NETFX_CORE
 using System.Data.Linq;
 #endif
@@ -32,7 +33,6 @@ using System.Data.Linq;
 using System.Data.SqlTypes;
 #endif
 using System.Text;
-using Newtonsoft.Json.Converters;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -41,7 +41,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.JsonV4.Tests.Converters
 {
     [TestFixture]
     public class BinaryConverterTests : TestFixtureBase

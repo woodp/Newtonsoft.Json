@@ -25,11 +25,11 @@
 
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Utilities;
 using System.IO;
 using System.Globalization;
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.JsonV4.Linq
 {
     /// <summary>
     /// Represents a JSON array.
@@ -224,7 +224,7 @@ namespace Newtonsoft.Json.Linq
         }
 
         /// <summary>
-        /// Gets or sets the <see cref="Newtonsoft.Json.Linq.JToken"/> at the specified index.
+        /// Gets or sets the <see cref="JToken"/> at the specified index.
         /// </summary>
         /// <value></value>
         public JToken this[int index]

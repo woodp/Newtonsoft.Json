@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using Newtonsoft.JsonV4.Utilities;
 #if NET20
 using Newtonsoft.Json.Serialization;
 #else
@@ -42,7 +43,6 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using TestMethod = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 using SetUp = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestInitializeAttribute;
 #endif
-using Newtonsoft.Json.Utilities;
 using System.Collections;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
@@ -51,7 +51,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.JsonV4.Tests
 {
     [TestFixture]
     public abstract class TestFixtureBase

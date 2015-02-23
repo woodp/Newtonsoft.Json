@@ -26,9 +26,9 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.JsonV4.Serialization;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace Newtonsoft.JsonV4.Tests.TestObjects
 {
     public class DateTimeErrorObjectCollection : Collection<DateTime>
     {

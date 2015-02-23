@@ -25,7 +25,8 @@
 
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Serialization;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -33,10 +34,9 @@ using System.Linq;
 #endif
 using System.IO;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.JsonV4.Schema
 {
     internal class JsonSchemaBuilder
     {

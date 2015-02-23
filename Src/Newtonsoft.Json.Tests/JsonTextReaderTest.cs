@@ -26,7 +26,8 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
@@ -38,12 +39,11 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json;
+using Newtonsoft.JsonV4;
 using System.IO;
 using System.Xml;
-using Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.JsonV4.Tests
 {
     [TestFixture]
     public class JsonTextReaderTest : TestFixtureBase
@@ -253,7 +253,7 @@ namespace Newtonsoft.Json.Tests
             string json = "[1.0,1,9.9,1E-06]";
 
             JsonTextReader reader = new JsonTextReader(new StringReader(json));
-            reader.FloatParseHandling = Json.FloatParseHandling.Decimal;
+            reader.FloatParseHandling = JsonV4.FloatParseHandling.Decimal;
 
             Assert.IsTrue(reader.Read());
             Assert.AreEqual(JsonToken.StartArray, reader.TokenType);
@@ -288,7 +288,7 @@ namespace Newtonsoft.Json.Tests
             string json = "[NaN]";
 
             JsonTextReader reader = new JsonTextReader(new StringReader(json));
-            reader.FloatParseHandling = Json.FloatParseHandling.Decimal;
+            reader.FloatParseHandling = JsonV4.FloatParseHandling.Decimal;
 
             Assert.IsTrue(reader.Read());
             Assert.AreEqual(JsonToken.StartArray, reader.TokenType);
@@ -1446,7 +1446,7 @@ bye", reader.Value);
             ExceptionAssert.Throws<JsonReaderException>("Unexpected character encountered while parsing number: s. Path '', line 1, position 77.", () => reader.ReadAsDecimal());
 
             reader = new JsonTextReader(new StringReader("9999999999999999999999999999999999999999999999999999999999999999999999999999asdasdasd"));
-            reader.FloatParseHandling = Json.FloatParseHandling.Decimal;
+            reader.FloatParseHandling = JsonV4.FloatParseHandling.Decimal;
             ExceptionAssert.Throws<JsonReaderException>("Unexpected character encountered while parsing number: s. Path '', line 1, position 77.", () => reader.Read());
 
             reader = new JsonTextReader(new StringReader("1E-06"));
@@ -3128,7 +3128,7 @@ null//comment
             string json = @"[""1970-01-01T00:00:00Z"",""\/Date(0)\/""]";
 
             JsonTextReader reader = new JsonTextReader(new StringReader(json));
-            reader.DateParseHandling = Json.DateParseHandling.DateTime;
+            reader.DateParseHandling = JsonV4.DateParseHandling.DateTime;
 
             Assert.IsTrue(reader.Read());
             Assert.IsTrue(reader.Read());
@@ -3141,7 +3141,7 @@ null//comment
 
 #if !NET20
             reader = new JsonTextReader(new StringReader(json));
-            reader.DateParseHandling = Json.DateParseHandling.DateTimeOffset;
+            reader.DateParseHandling = JsonV4.DateParseHandling.DateTimeOffset;
 
             Assert.IsTrue(reader.Read());
             Assert.IsTrue(reader.Read());
@@ -3154,7 +3154,7 @@ null//comment
 #endif
 
             reader = new JsonTextReader(new StringReader(json));
-            reader.DateParseHandling = Json.DateParseHandling.None;
+            reader.DateParseHandling = JsonV4.DateParseHandling.None;
 
             Assert.IsTrue(reader.Read());
             Assert.IsTrue(reader.Read());
@@ -3167,7 +3167,7 @@ null//comment
 
 #if !NET20
             reader = new JsonTextReader(new StringReader(json));
-            reader.DateParseHandling = Json.DateParseHandling.DateTime;
+            reader.DateParseHandling = JsonV4.DateParseHandling.DateTime;
 
             Assert.IsTrue(reader.Read());
             reader.ReadAsDateTimeOffset();
@@ -3180,7 +3180,7 @@ null//comment
 
 
             reader = new JsonTextReader(new StringReader(json));
-            reader.DateParseHandling = Json.DateParseHandling.DateTimeOffset;
+            reader.DateParseHandling = JsonV4.DateParseHandling.DateTimeOffset;
 
             Assert.IsTrue(reader.Read());
             reader.ReadAsDateTime();

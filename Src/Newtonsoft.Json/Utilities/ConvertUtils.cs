@@ -27,11 +27,11 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.ComponentModel;
+using Newtonsoft.JsonV4.Serialization;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
 using System.Text;
-using Newtonsoft.Json.Serialization;
 using System.Reflection;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
@@ -41,7 +41,7 @@ using System.Data.SqlTypes;
 
 #endif
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.JsonV4.Utilities
 {
     internal enum PrimitiveTypeCode
     {

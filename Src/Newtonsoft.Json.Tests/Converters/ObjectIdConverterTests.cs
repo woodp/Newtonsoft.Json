@@ -24,8 +24,8 @@
 #endregion
 
 using System.IO;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
+using Newtonsoft.JsonV4.Bson;
 #if !NETFX_CORE
 using NUnit.Framework;
 
@@ -35,7 +35,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.JsonV4.Tests.Converters
 {
     [TestFixture]
     public class ObjectIdConverterTests : TestFixtureBase

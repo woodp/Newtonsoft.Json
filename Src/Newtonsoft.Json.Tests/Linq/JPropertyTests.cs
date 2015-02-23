@@ -27,7 +27,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -37,7 +37,7 @@ using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAtt
 #endif
 using System.IO;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.JsonV4.Tests.Linq
 {
     [TestFixture]
     public class JPropertyTests : TestFixtureBase

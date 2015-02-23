@@ -27,6 +27,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET35 || NET20 || PORTABLE40)
 using System.Dynamic;
 #endif
@@ -34,8 +36,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Security;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
 using System.Runtime.Serialization;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
@@ -44,7 +44,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.JsonV4.Serialization
 {
     internal class JsonSerializerInternalWriter : JsonSerializerInternalBase
     {

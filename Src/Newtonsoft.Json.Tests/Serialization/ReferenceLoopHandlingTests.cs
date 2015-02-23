@@ -36,9 +36,9 @@ using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAtt
 using System.Dynamic;
 #endif
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Tests.Linq;
+using Newtonsoft.JsonV4.Tests.Linq;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.JsonV4.Tests.Serialization
 {
     [TestFixture]
     public class ReferenceLoopHandlingTests : TestFixtureBase

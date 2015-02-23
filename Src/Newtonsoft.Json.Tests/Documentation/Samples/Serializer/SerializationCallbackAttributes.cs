@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Serializer
 {
     public class SerializationCallbackAttributes
     {

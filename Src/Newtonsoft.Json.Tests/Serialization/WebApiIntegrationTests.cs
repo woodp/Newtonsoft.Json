@@ -26,6 +26,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.JsonV4.Serialization;
 #if !NET20
 using System.Linq;
 #endif
@@ -40,9 +41,8 @@ using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAtt
 #if !(NETFX_CORE || NET20)
 using System.Runtime.Serialization.Json;
 #endif
-using Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.JsonV4.Tests.Serialization
 {
     [TestFixture]
     public class WebApiIntegrationTests : TestFixtureBase

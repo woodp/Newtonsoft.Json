@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Linq;
 #if !(NET35 || NET20 || PORTABLE)
 using System;
 using System.Collections.Generic;
@@ -32,8 +33,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Converters;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -41,14 +41,14 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Tests.TestObjects;
+using Newtonsoft.JsonV4.Utilities;
 using System.Globalization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using ErrorEventArgs = Newtonsoft.JsonV4.Serialization.ErrorEventArgs;
 using File = System.IO.File;
 
-namespace Newtonsoft.Json.Tests.Documentation
+namespace Newtonsoft.JsonV4.Tests.Documentation
 {
     public static class File
     {

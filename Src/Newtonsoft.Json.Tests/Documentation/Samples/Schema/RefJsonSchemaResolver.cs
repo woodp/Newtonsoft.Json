@@ -1,11 +1,11 @@
-﻿using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Schema;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Schema
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Schema
 {
     public class RefJsonSchemaResolver
     {

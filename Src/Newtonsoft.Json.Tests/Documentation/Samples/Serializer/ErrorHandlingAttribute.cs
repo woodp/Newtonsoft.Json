@@ -1,11 +1,11 @@
-﻿using Newtonsoft.Json.Serialization;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using Newtonsoft.JsonV4.Serialization;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Serializer
 {
     public class ErrorHandlingAttribute
     {

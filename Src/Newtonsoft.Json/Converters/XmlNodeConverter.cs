@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Utilities;
 #if !PORTABLE40
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,6 @@ using System.Xml;
 #if !(NET20 || PORTABLE40)
 using System.Xml.Linq;
 #endif
-using Newtonsoft.Json.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -39,7 +39,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.JsonV4.Converters
 {
     #region XmlNodeWrappers
 #if !NETFX_CORE && !PORTABLE && !PORTABLE40

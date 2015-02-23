@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Serializer
 {
     public class JsonObjectAttributeOverrideIEnumerable
     {

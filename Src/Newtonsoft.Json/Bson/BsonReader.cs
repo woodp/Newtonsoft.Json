@@ -28,11 +28,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.IO;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Serialization;
+using Newtonsoft.JsonV4.Utilities;
 
-namespace Newtonsoft.Json.Bson
+namespace Newtonsoft.JsonV4.Bson
 {
     /// <summary>
     /// Represents a reader that provides fast, non-cached, forward-only access to serialized Json data.
@@ -242,7 +242,7 @@ namespace Newtonsoft.Json.Bson
         /// </returns>
         public override bool Read()
         {
-            _readType = Json.ReadType.Read;
+            _readType = JsonV4.ReadType.Read;
 
             return ReadInternal();
         }

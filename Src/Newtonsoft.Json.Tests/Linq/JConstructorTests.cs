@@ -25,7 +25,7 @@
 
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.JsonV4.Linq;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -41,7 +41,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.JsonV4.Tests.Linq
 {
     [TestFixture]
     public class JConstructorTests : TestFixtureBase

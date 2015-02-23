@@ -28,10 +28,10 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 using System.Security;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NETFX_CORE || PORTABLE || PORTABLE40)
 using System.Security.Permissions;
 #endif
-using Newtonsoft.Json.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -39,7 +39,7 @@ using System.Linq;
 #endif
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.JsonV4.Serialization
 {
     internal static class JsonTypeReflector
     {

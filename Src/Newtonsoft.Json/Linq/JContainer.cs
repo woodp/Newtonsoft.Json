@@ -25,11 +25,11 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Utilities;
 #if !PORTABLE40
 using System.Collections.Specialized;
 #endif
 using System.Threading;
-using Newtonsoft.Json.Utilities;
 using System.Collections;
 using System.Globalization;
 using System.ComponentModel;
@@ -40,7 +40,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.JsonV4.Linq
 {
     /// <summary>
     /// Represents a token that can contain other tokens.

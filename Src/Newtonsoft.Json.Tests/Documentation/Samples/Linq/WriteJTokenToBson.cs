@@ -1,12 +1,12 @@
-﻿using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Newtonsoft.JsonV4.Bson;
+using Newtonsoft.JsonV4.Linq;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Linq
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Linq
 {
     public class WriteJTokenToBson
     {

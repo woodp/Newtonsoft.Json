@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Xml
+namespace Newtonsoft.JsonV4.Tests.Documentation.Samples.Xml
 {
     public class ConvertXmlToJsonForceArray
     {

@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Utilities;
 #if !NETFX_CORE
 using global::NUnit.Framework;
 #else
@@ -30,9 +31,8 @@ using global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace Newtonsoft.JsonV4.Tests.Utilities
 {
     [TestFixture]
     public class StringUtilsTests : TestFixtureBase

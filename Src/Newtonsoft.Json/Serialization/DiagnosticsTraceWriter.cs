@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using DiagnosticsTrace = System.Diagnostics.Trace;
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.JsonV4.Serialization
 {
     /// <summary>
     /// Represents a trace writer that writes to the application's <see cref="TraceListener"/> instances.

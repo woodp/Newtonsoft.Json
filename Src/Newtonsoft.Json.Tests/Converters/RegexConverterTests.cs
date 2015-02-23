@@ -25,6 +25,9 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Bson;
+using Newtonsoft.JsonV4.Converters;
+using Newtonsoft.JsonV4.Serialization;
 #if !NET20 && !NETFX_CORE
 using System.Data.Linq;
 #endif
@@ -33,10 +36,7 @@ using System.Data.SqlTypes;
 #endif
 using System.IO;
 using System.Text.RegularExpressions;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.JsonV4.Utilities;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -44,9 +44,9 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.JsonV4.Tests.TestObjects;
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.JsonV4.Tests.Converters
 {
     [TestFixture]
     public class RegexConverterTests : TestFixtureBase

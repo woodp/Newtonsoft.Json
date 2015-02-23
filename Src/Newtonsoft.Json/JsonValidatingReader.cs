@@ -25,12 +25,12 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.JsonV4.Linq;
+using Newtonsoft.JsonV4.Schema;
+using Newtonsoft.JsonV4.Utilities;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using Newtonsoft.Json.Utilities;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.IO;
@@ -41,7 +41,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json
+namespace Newtonsoft.JsonV4
 {
     /// <summary>
     /// Represents a reader that provides <see cref="JsonSchema"/> validation.

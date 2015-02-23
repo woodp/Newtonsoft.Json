@@ -23,6 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+using Newtonsoft.JsonV4.Utilities;
 #if !(PORTABLE || PORTABLE40)
 using global::System;
 using global::System.Collections.Generic;
@@ -34,9 +35,8 @@ using global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using global::Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace Newtonsoft.JsonV4.Tests.Utilities
 {
     [TestFixture]
     public class ReflectionUtilsTests : TestFixtureBase
